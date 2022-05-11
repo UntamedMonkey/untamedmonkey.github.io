@@ -63,7 +63,7 @@
                     <span>主页</span>
                 </a>
             </li>
-            <li  class=active >
+            <li >
                 <a href="/tags">
                     <i class="iconfont icon-biaoqian1"></i>
                     <span>标签</span>
@@ -92,6 +92,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    
+</div>
+    
 </div>
 
 
@@ -118,50 +122,34 @@
         
 
 
-<!-- 归档列表 -->
-
-<div class="archives-container">
-
-<div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2021">
-                    <span class="tag-text">2021</span>
-                </span>
-    <ul>
+<div class="post-container">
+    <div class="post-title">
         
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>10-23</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2021/10/23/读书笔记-信息传播的载体的变更对社会和个人的影响/">
-                        <span>
-                            读书笔记|信息传播的载体的变更对社会和个人的影响
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
-        <!-- <li class="listing-item">
-        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-        </li> -->
-        <li >
-            <span>09-20</span>
-            <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-            <a href="/2021/09/20/hello-world/">
-                        <span>
-                            Hello World
-                        </span>
-            </a>
-            <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-        </li>
-        
+    </div>
 
-    </ul>
-</div>
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2022-05-11 22:59:05</span></span>
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <p>鲍曼所说的新贫穷，不再是温饱不足的贫穷，而是那些可以维持基本的吃穿住，但却无力消费时代消费伦理定义的基本潮流的人。消费社会要求其社会成员具备消费者的能力，如果不具备这种消费能力，就会被认为是有缺陷的消费者，是新穷人。他们就会被排除在正常生活之外，受到鄙视。因为无法达到和无力参与消费社会的幸福标准，新穷人便要面对物质和精神的双重压力，他们自尊感、他尊感很弱，羞耻感、负罪感很强，甚至会变得焦虑、抑郁、暴力倾向。</p>
+<p> 鲍曼提倡，在后现代的社会中，我们可以去追求有内聚力的生活。有内聚力的生活，就是需要我们真正考虑自己，不要陷入及时满足，去思辨和分析什么才是我们真正需要的。什么才是我们真正追求的。鲍曼批判工作伦理的道德束缚性，也批判后现代消费伦理美学的统治地位。他认为，后现代的我们需要再次去构建类似前现代的<strong>生活</strong>伦理，一个真正的生活道德。进而当一个人在真正的生活的时候，他应当得到社会的尊重和认同，而不是贬低和鄙视。我们需要构建这样的生活伦理，来消除人们的异化。参与或者践行生活伦理的人，他们或许会低欲望，或许会逃离北上广，乃至职场，没有功利的野心，不想成为名流和精英，更不想透支自己的身体和时间，他们或许更想按照过去传统农业手工业者那样，按照自然的节奏来安排每天的生活，想真正发展自己的身心性命，也或者是真正投入自己的兴趣和热爱。</p>
+<p>如在谈弗兰克尔和罗素时所提到的那样，因为现代人的异化正是表现为人们在生活中只剩下体验的意义而没有创造的意义。生活和人生的意义不是通过单纯的被动地去体验、单纯的支付购买就可以体会的。人的生活还有更宝贵的创造的价值和态度性的价值。因为创造，才会让人进入主动沉浸，而非被动沉浸，才会引发真正的心流。</p>
 
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
 </div>
 
     </div>
@@ -202,7 +190,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 
