@@ -11,7 +11,7 @@
 
     <title>
         
-        LeetCode刷题笔记（精简版） - undefined
+        C++容器总结 - undefined
         
     </title>
 
@@ -93,7 +93,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C-twoSum"><span class="toc-text">1 两数之和 twoSum</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%A4%E6%95%B0%E7%9B%B8%E5%8A%A0-addTwoNumbers"><span class="toc-text">2 两数相加 addTwoNumbers</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%97%A0%E9%87%8D%E5%A4%8D%E5%AD%97%E7%AC%A6%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E4%B8%B2-lengthOfLongestSubstring"><span class="toc-text">3 无重复字符的最长子串 lengthOfLongestSubstring</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%AF%BB%E6%89%BE%E4%B8%A4%E4%B8%AA%E6%AD%A3%E5%BA%8F%E6%95%B0%E7%BB%84%E7%9A%84%E4%B8%AD%E4%BD%8D%E6%95%B0-findMedianSortedArrays"><span class="toc-text">4 寻找两个正序数组的中位数 findMedianSortedArrays</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%9C%80%E9%95%BF%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2-longestPalindrome"><span class="toc-text">5 最长回文子串 longestPalindrome</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#STL%E7%AE%80%E4%BB%8B"><span class="toc-text">STL简介:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%97%E6%B3%95%EF%BC%9A"><span class="toc-text">算法：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%B9%E5%99%A8%EF%BC%9A"><span class="toc-text">容器：</span></a></li></ol>
 </div>
     
 </div>
@@ -124,11 +124,11 @@
 
 <div class="post-container">
     <div class="post-title">
-        LeetCode刷题笔记（精简版）
+        C++容器总结
     </div>
 
     <div class="post-meta">
-        <span class="attr">发布于：<span>2022-06-03 17:27:06</span></span>
+        <span class="attr">发布于：<span>2022-06-03 20:59:07</span></span>
         
         <span class="attr">标签：/
         
@@ -145,23 +145,42 @@
 </span>
     </div>
     <div class="post-content ">
-        <blockquote>
-<p>Note of LeetCode Question (No.1 to No.100)  <br>Points of C++ and Python  </p>
-</blockquote>
-<p><br><br></p>
-<h3 id="1-两数之和-twoSum"><a href="#1-两数之和-twoSum" class="headerlink" title="1 两数之和 twoSum"></a>1 两数之和 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/two-sum/">twoSum</a></h3><p>hash map记录已经遇到的数字 T:O(n) S:O(n)</p>
-<p><br><br></p>
-<h3 id="2-两数相加-addTwoNumbers"><a href="#2-两数相加-addTwoNumbers" class="headerlink" title="2 两数相加 addTwoNumbers"></a>2 两数相加 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/add-two-numbers/">addTwoNumbers</a></h3><p>模拟竖式加法 链表使用头结点 别忘了最后一个进位 T：O(n+m) S:O(n+m)</p>
-<p><br><br></p>
-<h3 id="3-无重复字符的最长子串-lengthOfLongestSubstring"><a href="#3-无重复字符的最长子串-lengthOfLongestSubstring" class="headerlink" title="3 无重复字符的最长子串 lengthOfLongestSubstring"></a>3 无重复字符的最长子串 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-substring-without-repeating-characters/">lengthOfLongestSubstring</a></h3><p>滑动窗口法（两端单调移动） hash map记录右端字符的最后出现位置  T:O(n) S:O(n)</p>
-<p><br><br></p>
-<h3 id="4-寻找两个正序数组的中位数-findMedianSortedArrays"><a href="#4-寻找两个正序数组的中位数-findMedianSortedArrays" class="headerlink" title="4 寻找两个正序数组的中位数 findMedianSortedArrays"></a>4 寻找两个正序数组的中位数 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/median-of-two-sorted-arrays/">findMedianSortedArrays</a></h3><p><br><br></p>
-<h3 id="5-最长回文子串-longestPalindrome"><a href="#5-最长回文子串-longestPalindrome" class="headerlink" title="5 最长回文子串 longestPalindrome"></a>5 最长回文子串 <a target="_blank" rel="noopener" href="https://leetcode.cn/problems/longest-palindromic-substring/">longestPalindrome</a></h3><ul>
-<li><input disabled="" type="checkbox"> 马拉车算法 T:O(n) </li>
-<li><input disabled="" type="checkbox"> 二分+哈希算法 T:O(n) \</li>
+        <h3 id="STL简介"><a href="#STL简介" class="headerlink" title="STL简介:"></a>STL简介:</h3><ul>
+<li>算法</li>
+<li>容器</li>
+<li>函数（Functions）</li>
+<li>迭代器</li>
 </ul>
-<ul>
-<li>枚举法：枚举中心,分奇偶遍历 T:O(n<sup>2</sup>) </li>
+<h3 id="算法："><a href="#算法：" class="headerlink" title="算法："></a>算法：</h3><ul>
+<li>sort(startaddress, endaddress)<h3 id="容器："><a href="#容器：" class="headerlink" title="容器："></a>容器：</h3></li>
+<li>序列式容器:<ul>
+<li>vector </li>
+<li>deque</li>
+<li>list</li>
+<li>arrays</li>
+<li>forward_list</li>
+</ul>
+</li>
+<li>容器适配器:<ul>
+<li>queue</li>
+<li>priority_queue</li>
+<li>stack</li>
+</ul>
+</li>
+<li>关联式容器:<ul>
+<li> set</li>
+<li> multiset</li>
+<li> map</li>
+<li> multimap</li>
+</ul>
+</li>
+<li>无序关联式容器:<ul>
+<li> unordered_set</li>
+<li> unordered_multiset</li>
+<li> unordered_map</li>
+<li> unordered_multimap</li>
+</ul>
+</li>
 </ul>
 
         
