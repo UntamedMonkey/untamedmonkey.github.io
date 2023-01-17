@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        python编程规范 - undefined
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_pl6z7sid89qkt9.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 舟を漕いで、濡れながら </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar ">
+            <img src="/img/favicon.ico" />
+        </div>
+        <div class="name">
+            <i></i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">1.工程结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></li></ol></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 舟を漕いで、濡れながら </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        python编程规范
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2023-01-15 18:08:42</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#学习笔记" title="学习笔记">学习笔记</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#python" title="python">python</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content ">
+        <h1 id="1-工程结构"><a href="#1-工程结构" class="headerlink" title="1.工程结构"></a>1.工程结构</h1><ul>
+<li>保证仓库结构清晰、易读，如示例1.1所示。</li>
+<li>代码间低耦合，无循环依赖，少使用全局变量，少写长函数</li>
+<li>拆分出文件（模块）、文件夹（包）；合理使用相对import和绝对import</li>
+<li>合理使用面向对象、装饰器、with(上下文管理器；示例1.2)等特性，有利于代码解耦。</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">例1.1：仓库结构示例</span></span><br><span class="line">README</span><br><span class="line">LICENSE</span><br><span class="line">setup.py</span><br><span class="line">requirements.txt</span><br><span class="line">codes/</span><br><span class="line">	models/</span><br><span class="line">	configs/</span><br><span class="line">	kernels/</span><br><span class="line">	utils/</span><br><span class="line">	trainer/</span><br><span class="line">	datas/</span><br><span class="line">	train.py</span><br><span class="line">	test.py</span><br><span class="line">	inference.py</span><br><span class="line">	README</span><br><span class="line">docs/</span><br><span class="line">tests/</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 例1.2：使用上下文管理的两种方法</span></span><br><span class="line"><span class="comment"># 定义enter和exit方法实现：</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomOpen</span>(<span class="params"><span class="built_in">object</span></span>):</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span>(<span class="params">self, filename</span>):</span></span><br><span class="line">        self.file = <span class="built_in">open</span>(filename)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__enter__</span>(<span class="params">self</span>):</span></span><br><span class="line">        <span class="keyword">return</span> self.file</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__exit__</span>(<span class="params">self, ctx_type, ctx_value, ctx_traceback</span>):</span></span><br><span class="line">        self.file.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> CustomOpen(<span class="string">&#x27;file&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    contents = f.read()</span><br><span class="line"><span class="comment"># 使用自带的contextlib实现：</span></span><br><span class="line"><span class="keyword">from</span> contextlib <span class="keyword">import</span> contextmanager</span><br><span class="line"></span><br><span class="line"><span class="meta">@contextmanager</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">custom_open</span>(<span class="params">filename</span>):</span></span><br><span class="line">    f = <span class="built_in">open</span>(filename)</span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line">        <span class="keyword">yield</span> f</span><br><span class="line">    <span class="keyword">finally</span>:</span><br><span class="line">        f.close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> custom_open(<span class="string">&#x27;file&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    contents = f.read()</span><br><span class="line">```  </span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2.代码风格</span></span><br><span class="line">  - 在存在各种黑魔法的Python中，我们提倡最明确和直接的编码方式</span><br><span class="line">  - 在同一行代码中写 两条独立的语句是糟糕的。</span><br><span class="line">  - 少使用*args定义函数参数,因为它不应该被用在能用更简单和更明确的结构，来足够表达函数意图的情况中。</span><br><span class="line">  - 任何不开放给客户端代码使用的方法或属性，应该有一个下划线前缀。</span><br><span class="line">  - 函数只有一个出口点，输入、运行环境的检查建议使用异常机制，见例<span class="number">2.1</span></span><br><span class="line">  - 可能运行失败的代码使用异常机制（``<span class="keyword">try</span>...<span class="keyword">except</span>``）</span><br><span class="line">  - 使用上下文管理器管理资源</span><br><span class="line">  - 使用属性，而不是get/<span class="built_in">set</span></span><br><span class="line">  - 使用``_``命名临时变量</span><br><span class="line">  - 避免对不同类型的对象使用同一个变量名</span><br><span class="line">  - string类型是不可变类型，减少内存分配，少使用``s+=<span class="built_in">str</span>(i)``，可以改成：生成<span class="built_in">list</span>，再join。</span><br><span class="line">  - 使用 <span class="built_in">str</span>.<span class="built_in">format</span>() 替代 % 操作符。例如：``foobar = <span class="string">&#x27;&#123;foo&#125;&#123;bar&#125;&#x27;</span>.<span class="built_in">format</span>(foo=foo, bar=bar)``</span><br><span class="line">  - 使用``<span class="keyword">in</span>``进行字串匹配</span><br><span class="line">  - 使用``<span class="built_in">enumerate</span>()``进行index计数</span><br><span class="line">  - 使用<span class="built_in">next</span>()进行按条件查找</span><br><span class="line">  - 对于可变序列，使用<span class="keyword">del</span>替代重新分配``<span class="keyword">del</span> l[j:] instead of l = l[:j]``</span><br><span class="line">  - 如果您知道一个列表或者元组的长度，您可以将其解包并为它的元素取名。``a, b, *middle, c = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]``</span><br><span class="line">  - 使用<span class="built_in">filter</span>() 函数过滤<span class="built_in">list</span>：``sequence[::] = <span class="built_in">list</span>(<span class="built_in">filter</span>(<span class="keyword">lambda</span> i: i != x, sequence))``</span><br><span class="line">  - 修改<span class="built_in">list</span>，优先考虑赋值为新的<span class="built_in">list</span>，如：``a = [i + <span class="number">3</span> <span class="keyword">for</span> i <span class="keyword">in</span> a] <span class="keyword">or</span> a = <span class="built_in">list</span>(<span class="built_in">map</span>(<span class="keyword">lambda</span> i: i + <span class="number">3</span>, a))``</span><br><span class="line">  - 过长的行一个更好的解决方案是在周围使用括号 ``(·····)``</span><br><span class="line">  - ``pip install autopep8````autopep8 --<span class="keyword">in</span>-place optparse.py``</span><br><span class="line">```python</span><br><span class="line"><span class="comment">#例2.1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">complex_function</span>(<span class="params">a, b, c</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> a:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span>  <span class="comment"># 抛出一个异常可能会更好</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> b:</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">None</span>  <span class="comment"># 抛出一个异常可能会更好</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 一些复杂的代码试着用a,b,c来计算x</span></span><br><span class="line">    <span class="comment"># 如果成功了，抵制住返回x的诱惑</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> x:</span><br><span class="line">        <span class="comment"># 一些关于x的计算的Plan-B</span></span><br><span class="line">    <span class="keyword">return</span> x  <span class="comment"># 返回值x只有一个出口点有利于维护代码</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#例2.2</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    x = <span class="built_in">next</span>(i <span class="keyword">for</span> i, n <span class="keyword">in</span> <span class="built_in">enumerate</span>(l) <span class="keyword">if</span> n &gt; <span class="number">0</span>)</span><br><span class="line"><span class="keyword">except</span> StopIteration:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;No positive numbers&#x27;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;The index of the first positive number is&#x27;</span>, x)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># python之禅</span></span><br><span class="line">优美胜于丑陋（Python以编写优美的代码为目标）</span><br><span class="line">明了胜于晦涩（优美的代码应当是明了的，命名规范，风格相似）</span><br><span class="line">简洁胜于复杂（优美的代码应当是简洁的，不要有复杂的内部实现）</span><br><span class="line">复杂胜于凌乱（如果复杂不可避免，那代码间也不能有难懂的关系，要保持接口简洁）</span><br><span class="line">扁平胜于嵌套（优美的代码应当是扁平的，不能有太多的嵌套）</span><br><span class="line">间隔胜于紧凑（优美的代码有适当的间隔，不要奢望一行代码解决问题）</span><br><span class="line">可读性很重要（优美的代码是可读的）</span><br><span class="line">即便假借特例的实用性之名，也不可违背这些规则（这些规则至高无上）</span><br><span class="line">不要包容所有错误，除非您确定需要这样做（精准地捕获异常，不写 <span class="keyword">except</span>:<span class="keyword">pass</span> 风格的代码）</span><br><span class="line">当存在多种可能，不要尝试去猜测</span><br><span class="line">而是尽量找一种，最好是唯一一种明显的解决方案（如果不确定，就用穷举法）</span><br><span class="line">虽然这并不容易，因为您不是 Python 之父（这里的 Dutch 是指 Guido ）</span><br><span class="line">做也许好过不做，但不假思索就动手还不如不做（动手之前要细思量）</span><br><span class="line">如果您无法向人描述您的方案，那肯定不是一个好方案；反之亦然（方案测评标准）</span><br><span class="line">命名空间是一种绝妙的理念，我们应当多加利用（倡导与号召）</span><br></pre></td></tr></table></figure>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a target="_blank" rel="noopener" href="https://pythonguidecn.readthedocs.io/zh/latest/">python最佳实践</a></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+</html>
