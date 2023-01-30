@@ -159,6 +159,9 @@
 gt_b = 6.6<br>x = torch.rand(1000, 3)<br>y = torch.mm(x, gt_w) + gt_b<br>y = y + torch.rand_like(y) * 10e-3<h1 id="dataloader-1"><a href="#dataloader-1" class="headerlink" title="dataloader"></a>dataloader</h1>data = TensorDataset(x, y)<br>data_batch = DataLoader(data, batch_size=1000, shuffle=True)<h1 id="moudle"><a href="#moudle" class="headerlink" title="moudle"></a>moudle</h1>model = torch.nn.Linear(3, 1)<h1 id="optimizer"><a href="#optimizer" class="headerlink" title="optimizer"></a>optimizer</h1>loss_fn = torch.nn.functional.mse_loss<br>optim = torch.optim.Adam(model.parameters(), lr=0.9)<h1 id="gradient-descent"><a href="#gradient-descent" class="headerlink" title="gradient descent"></a>gradient descent</h1>for i in range(10000):<br>for x_batch, y_batch in data_batch:<br> pred = model(x_batch)<br> loss = loss_fn(pred, y_batch)<br> loss.backward()<br> optim.step()<br> optim.zero_grad()<br>if i%100==99:<br> print(“{i}th iter loss:”.format(i=i).ljust(18), loss.item())<br>if loss.item()&lt;10e-6:<br> break<br>print(“gt w =”, gt_w.detach().numpy().T[0])<br>print(“gt b =”, gt_b)<br>print(“learned w =”, model.weight.detach().numpy().T)<br>print(“learned b =”, model.bias.detach().numpy())</li>
 </ol>
 <p>“””output<br>99th iter loss:    0.005614231340587139<br>gt w = [ 6.   -0.6   0.06]<br>gt b = 6.6<br>learned w = [[ 6.0015745 ]<br> [-0.6000941 ]<br> [ 0.05913432]]<br>learned b = [6.602816]<br>“””</p>
+<ol start="3">
+<li>实践经验</li>
+</ol>
 
         
         <br />
